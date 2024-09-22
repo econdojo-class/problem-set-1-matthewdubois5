@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Set up listings
+\lstset{
+    backgroundcolor=\color{lightgray}, % Set background color
+    basicstyle=\ttfamily,              % Use a typewriter font
+    numbers=left,                      % Line numbers on the left
+    numberstyle=\tiny,                 % Line number font size
+    frame=single,                      % Single frame around the code
+    language=Python,                   % Specify language for syntax highlighting
+    showstringspaces=false,            % Do not show spaces in strings
+    breaklines=true                    % Automatically break long lines
+}
+
+\begin{document}
+
+\title{Python and LaTeX: Assignment 1}
+\author{Matthew DuBois}
+\maketitle
+
+\section{Python Code}
+
+\begin{lstlisting}
+x = 5
+y = 2.5
+print (x + y)
+print (y - x)
+print (x * y)
+print (x ** 2)
+print (x // 2)
+\end{lstlisting}
+
+\begin{lstlisting}
+my_list = [1, 2, 3, 4, 5]
+my_list[my_list.index(3)] = 'hello'
+print (my_list)
+my_list.append('world')
+print (my_list)
+my_list.pop(0)
+print (my_list)
+\end{lstlisting}
+
+\begin{lstlisting}
+student_scores = {'Alice' : 85, 'Bob' : 90 , 'Charlie' : 78}
+student_scores['David'] = 88
+student_scores['Alice'] = 95
+del student_scores['Charlie']
+print (student_scores)
+\end{lstlisting}
+
+\begin{lstlisting}
+def calculate_area(width=5, height=10):
+ return width * height
+area = calculate_area(5, 10)
+print (area)
+\end{lstlisting}
+
+\begin{lstlisting}
+class Animal:
+...  def __init__(self, name):
+...   self.name = name
+...  def speak(self):
+...   print (f'The animal speaks')
+class Dog(Animal):
+     def speak(self):
+          print (f'{self.name} barks Woof! Woof!')
+a = Dog('Buddy')
+print (a.speak())
+\end{lstlisting}
+
+\section{Mathematical Explanation}
+\subsection{Question 1}For question one, x and y were both assigned values which is given by:
+    x=5 and y=2.5
+With assigned values, math operations can be performed simply by using the variables and proper math function.
+print (x+y) shows the value of 7.5 which comes from the respective values of the terms 5 and 2.5. The same process can be used for other functions such as division and exponents. 
+
+\subsection{Question 4} The formula for calculating the area of a rectangle is given by:
+  \[
+  A = \text{width} \times \text{height}
+  \]
+  where \( A \) is the area, and the width and height are the dimensions of the rectangle.
+
+\section{Conclusion}
+This assignment tested our knowledge of various python tasks. This began with basic math functions such as multiplication and division of two variables. This was followed by lists and dictionaries which are slightly more complicated but use logical thinking. It was wrapped up by a more complex area function and class with inheritance. All exercises were very helpful and also got exposed to LaTeX.
+\end{document}
